@@ -17,6 +17,7 @@ df = df.rename(columns={
     'season': 'Temporada'
 })
 
+st.set_page_config(layout="wide")
 st.title('Compare Jogadores da NBA 🏀')
 
 # 3. Obtenha listas de nomes de jogadores e temporadas únicas
@@ -56,4 +57,5 @@ if jogador1_nome and jogador2_nome and temporada1 and temporada2:
     elif jogador1.empty:
         st.warning(f'Não há dados para "{jogador1_nome}" na temporada "{temporada1}".')
     elif jogador2.empty:
+
         st.warning(f'Não há dados para "{jogador2_nome}" na temporada "{temporada2}".')
